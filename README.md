@@ -4,7 +4,7 @@ Uma API Restul designada para fornecer uma plataforma inteligente para localiza�
 
 ## Describtion
 O projeto é baseado em serviços de:
-* cadastro dos pontos de interesse por nome e coordenadas
+* Cadastro dos pontos de interesse por nome e coordenadas
 * Listagem dos pontos de interesse cadastrados
 * Listagem dos POIs próximos a uma coordenada passada como ponto de referência
 ## Build with
