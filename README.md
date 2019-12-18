@@ -6,7 +6,8 @@ Uma API Restul designada para fornecer uma plataforma inteligente para localiza�
 O projeto é baseado em serviços de:
 * Cadastro dos pontos de interesse por nome e coordenadas
 * Listagem dos pontos de interesse cadastrados
-* Listagem dos POIs próximos a uma coordenada passada como ponto de referência
+* Listagem dos POIs próximos a uma coordenada passada como ponto de
+  referência juntamente com uma distância máxima de busca
 ## Build with
 
 * [SpringBoot](https://start.spring.io/) - The web framework used
