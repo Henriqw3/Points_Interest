@@ -4,8 +4,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class DeviceplatformApplication
+class DeviceplatformApplication()
+
 
 fun main(args: Array<String>) {
 	runApplication<DeviceplatformApplication>(*args)
+
 }

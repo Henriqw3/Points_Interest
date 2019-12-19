@@ -12,7 +12,7 @@ interface POIsService {
 
     fun getAllPoints(): List<PointOfInterest>?
 
-    fun getAdjacentPoints(coordX: Int, coordY: Int): List<PointOfInterest>?
+    fun getAdjacentPoints(coordX: Int, coordY: Int, dist: Int): List<PointOfInterest>?
 
     fun removePoint(poiX: Int, poiY: Int)
 }

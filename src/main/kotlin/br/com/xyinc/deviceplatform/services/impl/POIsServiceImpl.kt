@@ -14,12 +14,12 @@ class POIsServiceImpl (val pointRepository: PointsRepositories) : POIsService{
 
     override fun getPointByName(name: String): PointOfInterest? = pointRepository.findByName(name)
 
-    override fun getAllPoints(): List<PointOfInterest>? = pointRepository.findAll().toList()
+    override fun getAllPoints(): List<PointOfInterest>? = pointRepository.findAll()
 
-    override fun getAdjacentPoints(coordX: Int, coordY: Int): List<PointOfInterest>? {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-    
+    override fun getAdjacentPoints(coordX: Int, coordY: Int, dist: Int): List<PointOfInterest>? {return null}//=
+            //this.getAllPoints().filter{}
+
+
     override fun removePoint(poiX: Int, poiY: Int) = pointRepository.delete(pointRepository.findByCoordinate(poiX, poiY))
 
 }
