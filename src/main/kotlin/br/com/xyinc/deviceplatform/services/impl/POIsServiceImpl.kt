@@ -19,7 +19,7 @@ class POIsServiceImpl (val pointRepository: PointsRepositories) : POIsService{
     override fun getAdjacentPoints(coordX: Int, coordY: Int, d: Int): List<PointOfInterest>? {
         val allPoints = this.getAllPoints().toMutableList()
         val points: MutableList<PointOfInterest> = mutableListOf()
-        var dist: Double = 0.0
+        var dist: Double
 
         for(p in allPoints) {
             dist = Math.sqrt(Math.pow((p.poi_x - coordX).toDouble(), 2.0)
