@@ -7,5 +7,5 @@ package br.com.xyinc.deviceplatform.response
 
 class Response<T> (
         val erros: ArrayList<String> = arrayListOf(),
-        val dados: T? = null
+        var dados: T? = null
 )
