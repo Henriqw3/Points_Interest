@@ -35,7 +35,7 @@ Após importar dependências,  Run: DeviceplatformApplication.kt
 - Portas para teste dos 3 serviços:<br/>
 ```http://localhost:8080/interestpoint/addpoints``` - Criação do ponto de interesse <br/>
 ```http://localhost:8080/interestpoint/listofpoint``` - lista todos os pontos criados <br/>
-```http://localhost:8080/interestpoint/approximatepoints?x=10&y=13&maxDistance=5``` - lista todos os pontos próximos a coordenada <br/>
+```http://localhost:8080/interestpoint/approximatepoints?x=10&y=13&distance=5``` - lista todos os pontos próximos a coordenada <br/>
 
 ## Knowledge Used
 
