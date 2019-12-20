@@ -12,7 +12,7 @@ import javax.validation.Valid
 
 
 @RestController
-@RequestMapping("/pointofinterest")
+@RequestMapping("/interestpoint")
 class PointsController (val poisService: POIsService){
 
     @PostMapping
@@ -34,6 +34,22 @@ class PointsController (val poisService: POIsService){
         return ResponseEntity.ok(response)
     }
 
+    @RequestMapping("/listofpoint")
+    @GetMapping()
+    fun listAllPoints(): ResponseEntity<List<PointOfInterestDto?>> {
+        val points: List<PointOfInterest> = poisService.getAllPoints()
+        val allpoints: List<PointOfInterestDto?> = points.map { points -> PointToDto(points)}
+        return ResponseEntity.ok(allpoints)
+    }
+
+    @RequestMapping("approximatepoints")
+    @GetMapping
+    fun listPointsProx(@RequestParam x:Int, @RequestParam y:Int, @RequestParam dist:Int)
+            : ResponseEntity<List<PointOfInterest>> {
+
+        val closeInterestPoints = poisService.getAdjacentPoints(x, y, dist)
+        return ResponseEntity.ok(closeInterestPoints!!)
+    }
 //######### Extra Functions:
 
     private fun DtoToPoint(poiDto: PointOfInterestDto, result: BindingResult): PointOfInterest {
