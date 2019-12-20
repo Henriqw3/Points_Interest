@@ -31,12 +31,16 @@ class PointsController (val poisService: POIsService){
 
         return ResponseEntity.ok(response)
     }
+//######### Extra Functions:
 
     private fun DtoToPoint(poiDto: PointOfInterestDto, result: BindingResult): PointOfInterest {
 
         if(poiDto.id != null) {
-            val point: PointOfInterest? = poisService.
+            val point: PointOfInterest? = poisService.getPointByCoordinate(poiDto.poi_x, poiDto.poi_y)
+            if(point == null) result.addError(ObjectError("pointOfInterest",
+                    "Ponto de interesse não encontrado."))
         }
+        return PointOfInterest(poiDto.name, poiDto.poi_x, poiDto.poi_y)
     }
 
     private fun validatePoint(poiDto: PointOfInterestDto, result: BindingResult) {
