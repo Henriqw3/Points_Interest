@@ -31,9 +31,13 @@ Importe o projeto para o IntelliJ como modelo Gradle Project externo
 <br/>
 Após importar dependências,  Run: DeviceplatformApplication.kt
 
-## Knowledge Used
+### Running Tests:
+- Portas para teste dos 3 serviços:<br/>
+```http://localhost:8080/interestpoint/addpoints``` - Criação do ponto de interesse <br/>
+```http://localhost:8080/interestpoint/listofpoint``` - lista todos os pontos criados <br/>
+```http://localhost:8080/interestpoint/approximatepoints?x=10&y=13&maxDistance=5``` - lista todos os pontos próximos a coordenada <br/>
 
-#### Adquiridos por:
+## Knowledge Used
 
 * `https://play.kotlinlang.org/byExample/overview` - [Learn Kotlin Programming](https://play.kotlinlang.org/byExample/overview)
 * `https://felipetoscano.com.br/visao-geral-do-mongodb/`- [MongoDB Overview](https://felipetoscano.com.br/visao-geral-do-mongodb/)
