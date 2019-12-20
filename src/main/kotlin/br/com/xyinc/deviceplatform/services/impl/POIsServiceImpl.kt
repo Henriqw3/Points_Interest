@@ -16,8 +16,20 @@ class POIsServiceImpl (val pointRepository: PointsRepositories) : POIsService{
 
     override fun getAllPoints(): List<PointOfInterest> = pointRepository.findAll()
 
-    override fun getAdjacentPoints(coordX: Int, coordY: Int, dist: Int): List<PointOfInterest>? {return null}//=
-            //this.getAllPoints().filter{}
+    override fun getAdjacentPoints(coordX: Int, coordY: Int, d: Int): List<PointOfInterest>? {
+        val allPoints = this.getAllPoints().toMutableList()
+        val points: MutableList<PointOfInterest> = mutableListOf()
+        var dist: Double = 0.0
+
+        for(p in allPoints.iterator()) {
+            dist = Math.sqrt(Math.pow((p.poi_x - coordX).toDouble(), 2.0)
+                            + Math.pow((p.poi_y - coordY).toDouble(), 2.0))
+            if(dist <= d){
+                points.add(p)
+            }
+        }
+        return points.toList()
+    }
 
     override fun removePoint(poiX: Int, poiY: Int) = pointRepository.delete(pointRepository.findByCoordinate(poiX, poiY))
 
