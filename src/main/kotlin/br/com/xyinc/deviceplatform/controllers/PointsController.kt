@@ -14,7 +14,8 @@ import javax.validation.Valid
 @RestController
 @RequestMapping("/interestpoint")
 class PointsController (val poisService: POIsService){
-
+    
+    @RequestMapping("/addpoints")
     @PostMapping
     fun registerPoint(@Valid @RequestBody pointDto: PointOfInterestDto,
                       result: BindingResult): ResponseEntity<Response<PointOfInterestDto>> {
@@ -42,7 +43,7 @@ class PointsController (val poisService: POIsService){
         return ResponseEntity.ok(allpoints)
     }
 
-    @RequestMapping("approximatepoints")
+    @RequestMapping("/approximatepoints")
     @GetMapping
     fun listPointsProx(@RequestParam x:Int, @RequestParam y:Int, @RequestParam dist:Int)
             : ResponseEntity<List<PointOfInterest>> {
