@@ -10,7 +10,7 @@ interface POIsService {
 
     fun getPointByName(name: String): PointOfInterest?
 
-    fun getAllPoints(): List<PointOfInterest>?
+    fun getAllPoints(): List<PointOfInterest>
 
     fun getAdjacentPoints(coordX: Int, coordY: Int, dist: Int): List<PointOfInterest>?
 

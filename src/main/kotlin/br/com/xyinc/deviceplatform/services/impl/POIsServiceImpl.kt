@@ -14,7 +14,7 @@ class POIsServiceImpl (val pointRepository: PointsRepositories) : POIsService{
 
     override fun getPointByName(name: String): PointOfInterest? = pointRepository.findByName(name)
 
-    override fun getAllPoints(): List<PointOfInterest>? = pointRepository.findAll()
+    override fun getAllPoints(): List<PointOfInterest> = pointRepository.findAll()
 
     override fun getAdjacentPoints(coordX: Int, coordY: Int, dist: Int): List<PointOfInterest>? {return null}//=
             //this.getAllPoints().filter{}
