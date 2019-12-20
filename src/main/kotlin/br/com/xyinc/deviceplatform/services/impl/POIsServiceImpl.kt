@@ -21,7 +21,7 @@ class POIsServiceImpl (val pointRepository: PointsRepositories) : POIsService{
         val points: MutableList<PointOfInterest> = mutableListOf()
         var dist: Double = 0.0
 
-        for(p in allPoints.iterator()) {
+        for(p in allPoints) {
             dist = Math.sqrt(Math.pow((p.poi_x - coordX).toDouble(), 2.0)
                             + Math.pow((p.poi_y - coordY).toDouble(), 2.0))
             if(dist <= d){
