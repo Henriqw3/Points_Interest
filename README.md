@@ -26,9 +26,10 @@ Clone o projeto xy-inc copiando a url para o seu terminal após ter criado uma p
 ```sh
 https://github.com/Henriqw3/xy-inc.git
 ```
+Ou faça o dowload do repositório
 Importe o projeto para o IntelliJ como modelo Gradle Project externo
 <br/>
-Após import dependencies Run em DeviceplatformApplication.kt
+Após importar dependências,  Run: DeviceplatformApplication.kt
 
 ## Knowledge Used
 
