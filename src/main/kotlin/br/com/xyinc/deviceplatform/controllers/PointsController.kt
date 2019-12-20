@@ -26,7 +26,17 @@ class PointsController (val poisService: POIsService){
             for(e in result.allErrors) response.erros.add(e.defaultMessage!!)
             return ResponseEntity.badRequest().body(response)
         }
+
+        val point: PointOfInterest = DtoToPoint(pointDto, result)
+
         return ResponseEntity.ok(response)
+    }
+
+    private fun DtoToPoint(poiDto: PointOfInterestDto, result: BindingResult): PointOfInterest {
+
+        if(poiDto.id != null) {
+            val point: PointOfInterest? = poisService.
+        }
     }
 
     private fun validatePoint(poiDto: PointOfInterestDto, result: BindingResult) {
