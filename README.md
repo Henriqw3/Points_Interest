@@ -1,4 +1,4 @@
-# DesafioBackend/xy-inc
+# Points of Interest
 
 Uma API Restul designada para fornecer uma plataforma inteligente para localização de Pontos de interesse(POIs) por receptores GPS.
 
